@@ -1,0 +1,90 @@
+<html>
+<head>
+
+<style>
+  .main {
+    margin: auto;
+    width: 80%;
+    font-size: 55;
+
+  }
+
+  button {
+    margin-top: 30px;
+    font-size: 45;
+  }
+
+</style>
+
+</head>
+<body>
+
+<div class="main">
+<center>
+<button onclick="output()">Click Me</button>
+
+<p id="services"></p>
+<p id="genres"></p>
+<p id="types"></p>
+<p id="numbers"></p>
+</center>
+</div>
+
+
+<script>
+const services = [
+    'Hulu',
+    'Amazon Prime',
+    'Netflix',
+    'Disney+',
+    'Showtime'
+ ];
+ 
+ const genres = [
+    'Romance',                                                                                             'Reality',
+    'Drama',
+    'Comedy',
+    'Action',
+    'Science Fiction',
+    'Documentary'
+ ];
+
+const types = [
+    'Movie',
+    'TV'
+ ];
+
+const numbers = [
+    '1st',
+    '2nd',
+    '3rd',
+    '4th',
+    '5th',
+    '6th'
+ ];
+ 
+ function randomService(services) {
+   return services[Math.floor(Math.random() * services.length)];
+ }
+
+function randomGenre(genres) {
+   return genres[Math.floor(Math.random() * genres.length)];
+ }
+
+function randomType(types) {
+   return types[Math.floor(Math.random() * types.length)];
+ }
+
+function randomNumber(numbers) {
+   return numbers[Math.floor(Math.random() * numbers.length)];
+ }
+ 
+function output() {
+   document.getElementById("services").innerHTML = randomService(services);
+   document.getElementById("genres").innerHTML = randomGenre(genres);
+   document.getElementById("types").innerHTML = randomType(types);
+   document.getElementById("numbers").innerHTML = randomNumber(numbers);
+ }
+                                                                                                       </script>
+</body>
+</html>
